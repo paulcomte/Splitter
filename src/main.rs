@@ -1,5 +1,6 @@
 use image::{DynamicImage, GenericImageView};
 use std::env;
+use std::io::{stdout, Write};
 use std::path::Path;
 
 struct Settings {
@@ -51,8 +52,11 @@ fn main() {
         );
         return;
     }
+    println!("[Splitter]: Initializing environment.");
 
     let settings = Settings::init(args);
+
+    println!("[Splitter]: Resizing image.");
 
     let resized = settings.img.resize_exact(
         settings.col_width * settings.num_cols,
@@ -61,6 +65,7 @@ fn main() {
     );
 
     std::fs::create_dir_all(&settings.path).unwrap();
+    let total = settings.num_rows * settings.num_cols;
 
     for i in 0..settings.num_rows {
         for j in 0..settings.num_cols {
@@ -83,6 +88,25 @@ fn main() {
 
             let output_path = format!("{}/{}_{}.png", settings.path, i, j);
             imgbuf.save(output_path).unwrap();
+            print_progress(i * settings.num_cols + j + 1, total);
         }
     }
+    println!("\n[Splitter]: Images saved in: [{}/]", settings.path);
+}
+
+fn print_progress(current: u32, total: u32) {
+    let progress = current as f32 / total as f32;
+    let bar_length = 20;
+    let filled_length = (progress * bar_length as f32).round() as usize;
+    let empty_length = bar_length - filled_length;
+    // Print the progress bar
+    print!(
+        "\r[{}{}] {:.0}%",
+        "=".repeat(filled_length),
+        " ".repeat(empty_length),
+        (progress * 100.0),
+    );
+
+    // Flush the output buffer to make sure it's immediately displayed on the console
+    let _ = stdout().flush();
 }
