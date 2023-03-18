@@ -60,6 +60,8 @@ fn main() {
         image::imageops::FilterType::Lanczos3,
     );
 
+    std::fs::create_dir_all(&settings.path).unwrap();
+
     for i in 0..settings.num_rows {
         for j in 0..settings.num_cols {
             let row_start = i * settings.row_height;
@@ -79,7 +81,7 @@ fn main() {
                 )
                 .to_rgb8();
 
-            let output_path = format!("{}_{}_{}.png", settings.path, i, j);
+            let output_path = format!("{}/{}_{}.png", settings.path, i, j);
             imgbuf.save(output_path).unwrap();
         }
     }
