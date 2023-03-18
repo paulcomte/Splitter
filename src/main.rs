@@ -99,12 +99,19 @@ fn print_progress(current: u32, total: u32) {
     let bar_length = 20;
     let filled_length = (progress * bar_length as f32).round() as usize;
     let empty_length = bar_length - filled_length;
+    let animation = match current % 4 {
+        0 => "|",
+        1 => "/",
+        2 => "-",
+        _ => "\\",
+    };
     // Print the progress bar
     print!(
-        "\r[{}{}] {:.0}%",
+        "\r[{}{}] {:.0}% {}",
         "=".repeat(filled_length),
         " ".repeat(empty_length),
         (progress * 100.0),
+        animation,
     );
 
     // Flush the output buffer to make sure it's immediately displayed on the console
