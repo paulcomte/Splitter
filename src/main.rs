@@ -87,7 +87,9 @@ fn main() {
                 .to_rgb8();
 
             let output_path = format!("{}/{}_{}.png", settings.path, i, j);
-            imgbuf.save(output_path).unwrap();
+            imgbuf
+                .save_with_format(output_path, image::ImageFormat::Png)
+                .unwrap();
             print_progress(i * settings.num_cols + j + 1, total);
         }
     }
