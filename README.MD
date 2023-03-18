@@ -4,11 +4,14 @@ A really small project made to improve the user experience on sectordisk.pw
 
 This project was made to split an image into smaller parts
 
-## Usage
+![Demo](examples/demo.gif)
 
-`cargo run image_path width:height n_rows:n_cols`
+## Usage
+> Release mode greatly improves the performances of the tool
+
+`cargo run --release image_path width:height n_rows:n_cols`
 
 ## Example
-`cargo run example.png 16:32 4:2`
+`cargo run --release example.png 16:32 4:2`
 
 You can find examples in the [examples folder](./examples/).
