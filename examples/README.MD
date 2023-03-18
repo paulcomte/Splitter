@@ -2,56 +2,56 @@
 
 Original Image
 
-![Original Image](example/shizu.jpg)
+![Original Image](shizu/shizu.jpg)
 
 Output Images `width: 16 | height: 32 | n_rows: 8 | n_cols: 4`
 
 <div style="display: flex;">
-  <img src="example/shizu_0_0.png">
-  <img src="example/shizu_0_1.png">
-  <img src="example/shizu_0_2.png">
-  <img src="example/shizu_0_3.png">
+  <img src="shizu/0_0.png">
+  <img src="shizu/0_1.png">
+  <img src="shizu/0_2.png">
+  <img src="shizu/0_3.png">
 </div>
 
 <div style="display: flex;">
-    <img src="example/shizu_1_0.png">
-    <img src="example/shizu_1_1.png">
-    <img src="example/shizu_1_2.png">
-    <img src="example/shizu_1_3.png">
+    <img src="shizu/1_0.png">
+    <img src="shizu/1_1.png">
+    <img src="shizu/1_2.png">
+    <img src="shizu/1_3.png">
 </div>
 <div style="display: flex;">
-    <img src="example/shizu_2_0.png">
-    <img src="example/shizu_2_1.png">
-    <img src="example/shizu_2_2.png">
-    <img src="example/shizu_2_3.png">
+    <img src="shizu/2_0.png">
+    <img src="shizu/2_1.png">
+    <img src="shizu/2_2.png">
+    <img src="shizu/2_3.png">
 </div>
 <div style="display: flex;">
-    <img src="example/shizu_3_0.png">
-    <img src="example/shizu_3_1.png">
-    <img src="example/shizu_3_2.png">
-    <img src="example/shizu_3_3.png">
+    <img src="shizu/3_0.png">
+    <img src="shizu/3_1.png">
+    <img src="shizu/3_2.png">
+    <img src="shizu/3_3.png">
 </div>
 <div style="display: flex;">
-    <img src="example/shizu_4_0.png">
-    <img src="example/shizu_4_1.png">
-    <img src="example/shizu_4_2.png">
-    <img src="example/shizu_4_3.png">
+    <img src="shizu/4_0.png">
+    <img src="shizu/4_1.png">
+    <img src="shizu/4_2.png">
+    <img src="shizu/4_3.png">
 </div>
 <div style="display: flex;">
-    <img src="example/shizu_5_0.png">
-    <img src="example/shizu_5_1.png">
-    <img src="example/shizu_5_2.png">
-    <img src="example/shizu_5_3.png">
+    <img src="shizu/5_0.png">
+    <img src="shizu/5_1.png">
+    <img src="shizu/5_2.png">
+    <img src="shizu/5_3.png">
 </div>
 <div style="display: flex;">
-    <img src="example/shizu_6_0.png">
-    <img src="example/shizu_6_1.png">
-    <img src="example/shizu_6_2.png">
-    <img src="example/shizu_6_3.png">
+    <img src="shizu/6_0.png">
+    <img src="shizu/6_1.png">
+    <img src="shizu/6_2.png">
+    <img src="shizu/6_3.png">
 </div>
 <div style="display: flex;">
-    <img src="example/shizu_7_0.png">
-    <img src="example/shizu_7_1.png">
-    <img src="example/shizu_7_2.png">
-    <img src="example/shizu_7_3.png">
+    <img src="shizu/7_0.png">
+    <img src="shizu/7_1.png">
+    <img src="shizu/7_2.png">
+    <img src="shizu/7_3.png">
 </div>
