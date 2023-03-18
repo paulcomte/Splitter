@@ -1,6 +1,6 @@
 use image::DynamicImage;
 
-use crate::{mapper::rgb_to_short, Settings};
+use crate::Settings;
 
 pub fn crop(settings: &Settings, resized: &DynamicImage, i: u32, j: u32) {
     let row_start = i * settings.row_height;
@@ -19,22 +19,8 @@ pub fn crop(settings: &Settings, resized: &DynamicImage, i: u32, j: u32) {
         )
         .to_rgb8();
 
-    let mut output = Vec::new();
-    for pixel in imgbuf.pixels() {
-        let xterm_color = rgb_to_short(pixel.0[0], pixel.0[1], pixel.0[2]);
-        output.push(xterm_color[0]);
-        output.push(xterm_color[1]);
-        output.push(xterm_color[2]);
-    }
-
     let output_path = format!("{}/{}_{}.png", settings.path, i, j);
-    image::save_buffer_with_format(
-        output_path,
-        &output,
-        settings.width,
-        settings.height,
-        image::ColorType::Rgb8,
-        image::ImageFormat::Png,
-    )
-    .unwrap();
+    imgbuf
+        .save_with_format(output_path, image::ImageFormat::Png)
+        .unwrap();
 }

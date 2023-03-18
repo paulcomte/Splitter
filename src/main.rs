@@ -7,7 +7,6 @@ use crate::{
 
 mod cropper;
 mod logger;
-mod mapper;
 mod settings;
 
 fn main() {
