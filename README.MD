@@ -10,3 +10,5 @@ This project was made to split an image into smaller parts
 
 ## Example
 `cargo run example.png 16:32 4:2`
+
+You can find examples in the [examples folder](./examples/).
